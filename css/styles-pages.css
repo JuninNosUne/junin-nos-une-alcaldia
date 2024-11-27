@@ -498,37 +498,30 @@
         max-width: 600px;
         display: grid;
     }
-
     .historia-image img{
         max-width: 80%;
         height: auto;
     }
-
     .sitios-container {
         padding: 0;
-    }
-    
+    } 
     .sitio h3 {
         text-align: center;
         font-size: 1.5em;
         padding: 0 15px;
     }
-
     .sitio p {
         padding: 15px;
     }
-
     .nota-contenido h3{
         font-size: 1.2em;
     }
-
     .nota-prensa{
         padding: 5px;
     }
-
-    .pages-footer{
-        margin-top: 100%;
-    }
+    .tramites-container{
+        margin-bottom: 100%;
+    }  
 }
 
 
