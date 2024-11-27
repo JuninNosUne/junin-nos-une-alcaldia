@@ -4,43 +4,43 @@ class MenuComponent extends HTMLElement {
         this.innerHTML = `
         <header class="header" id="header">
             <nav class="nav container">
-                <a href="../index.html" class="nav__logo">
-                    <img src="../img/logo.png" alt="Logo">
+                <a href="./index.html" class="nav__logo">
+                    <img src="./img/logo.png" alt="Logo">
                 </a>
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a href="../index.html" class="nav__link">
+                            <a href="./index.html" class="nav__link">
                                 <i class="ri-arrow-right-up-line"></i>
                                 <span>Inicio</span>
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="../pages/departamentos.html" class="nav__link">
+                            <a href="./pages/departamentos.html" class="nav__link">
                                 <i class="ri-arrow-right-up-line"></i>
                                 <span>Departamentos</span>
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="../pages/tramites.html" class="nav__link">
+                            <a href="./pages/tramites.html" class="nav__link">
                                 <i class="ri-arrow-right-up-line"></i>
                                 <span>Trámites</span>
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="../pages/municipio.html" class="nav__link">
+                            <a href="./pages/municipio.html" class="nav__link">
                                 <i class="ri-arrow-right-up-line"></i>
                                 <span>Municipio</span>
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="../pages/eventos.html" class="nav__link">
+                            <a href="./pages/eventos.html" class="nav__link">
                                 <i class="ri-arrow-right-up-line"></i>
                                 <span>Eventos</span>
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="../pages/actualidad.html" class="nav__link">
+                            <a href="./pages/actualidad.html" class="nav__link">
                                 <i class="ri-arrow-right-up-line"></i>
                                 <span>Actualidad</span>
                             </a>
