@@ -134,6 +134,15 @@
     object-fit: cover;
 }
 
+.nota-prensa video {
+    max-width: 400px;
+    max-height: 300px; /* Ajusta el tamaño de la imagen */
+    border-radius: 8px; 
+    margin-right: 20px; 
+    margin-bottom: 10px;
+    float: left; 
+}
+
 /* Contenedor de los detalles de la noticia */
 .nota-contenido {
     display: block;
@@ -520,7 +529,7 @@
         padding: 5px;
     }
     .tramites-container{
-        margin-bottom: 20%;
+        margin-bottom: 60px;
     }  
 }
 
