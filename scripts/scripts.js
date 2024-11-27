@@ -106,7 +106,8 @@ document.addEventListener('DOMContentLoaded', () => {
 function inicializarMapa() {
     
     var map = L.map('map', { 
-        scrollWheelZoom: false // Disable scroll zoom 
+        scrollWheelZoom: false,
+        dragging: false,
         }).setView([7.7024, -72.3605], 15);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
