@@ -7,6 +7,9 @@ html {
 
 body {
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     overflow-y: scroll; /* Habilita la barra de desplazamiento vertical */
     font-family: "Poppins", sans-serif;
     font-family: var(--body-font);
@@ -36,6 +39,9 @@ a {
     position: relative;
 }
 
+.main-content{
+  flex: 1;
+}
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 7.5rem;
