@@ -45,6 +45,12 @@ class MenuComponent extends HTMLElement {
                                 <span>Actualidad</span>
                             </a>
                         </li>
+                         <li class="nav__item">
+                            <a href="./revista.html" class="nav__link">
+                                <i class="ri-arrow-right-up-line"></i>
+                                <span>Revistas</span>
+                            </a>
+                        </li>
                     </ul>
                     <!-- Close button -->
                     <div class="nav__close" id="nav-close">
