@@ -8,6 +8,7 @@
 
 /* Contenedor principal */
 .tramites-container {
+    width: 100%;
     max-width: 1200px;
     margin: 140px auto;
     padding: 20px;
@@ -103,7 +104,7 @@
 /*PÁGINA ACTUALIDAD*/
 
 .actualidad-container {
-    margin: 40px auto;
+    margin: auto;
     max-width: 1200px;
     display: flex;
     flex-direction: column;
@@ -454,7 +455,7 @@
 @media (max-width: 1150px) {
 
     .tramites-container, .actualidad-container{
-        margin: 80px auto;
+        margin: auto;
     }
     .tramites-h2{
         font-size: 1.5em;

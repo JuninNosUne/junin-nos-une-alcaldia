@@ -80,16 +80,29 @@ function scrollContent(wrapperSelector, gallerySelector, itemSelector, nextBtnSe
         const nextBtn = document.querySelector(nextBtnSelector);
         const prevBtn = document.querySelector(prevBtnSelector);
         nextBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % (items.length - getItemsPerPage() + 1);
+            const itemsPerPage = getItemsPerPage();
+            currentIndex = (currentIndex + 1) % (items.length - itemsPerPage + 1);
             updateGallery();
             resetAutoScroll();
         });
         prevBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + items.length - getItemsPerPage() + 1) % (items.length - getItemsPerPage() + 1);
+            const itemsPerPage = getItemsPerPage();
+            currentIndex = (currentIndex - 1 + items.length - itemsPerPage + 1) % (items.length - itemsPerPage + 1);
             updateGallery();
             resetAutoScroll();
         });
     }
+
+    // Añade eventos a los botones numerados
+    const newsButtons = document.querySelectorAll('.news-button');
+    newsButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const itemsPerPage = getItemsPerPage();
+            currentIndex = Math.min(parseInt(button.getAttribute('data-index')), items.length - itemsPerPage);
+            updateGallery();
+            resetAutoScroll();
+        });
+    });
 }
 
 // Invoca la función para la galería de imágenes con flechas
@@ -104,7 +117,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /*=============== MAP FUNCTION ===============*/
 function inicializarMapa() {
-    
     var map = L.map('map', { 
         scrollWheelZoom: false,
         dragging: false,
@@ -209,7 +221,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
-
 
 
