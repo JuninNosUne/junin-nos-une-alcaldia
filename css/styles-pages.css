@@ -10,7 +10,7 @@
 .tramites-container {
     width: 100%;
     max-width: 1200px;
-    margin: 140px auto;
+    margin: auto;
     padding: 20px;
     background-color: white;
     border-radius: 8px;
@@ -186,6 +186,7 @@
 
 /* Estilos para el contenedor de departamentos */
 .departamentos-container {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto 60px auto;
     padding: 20px;
@@ -454,8 +455,11 @@
 
 @media (max-width: 1150px) {
 
-    .tramites-container, .actualidad-container{
-        margin: 80px auto;
+    .tramites-container{
+        margin: auto;
+    }
+    .actualidad-container {
+        margin: auto;
     }
     .tramites-h2{
         font-size: 1.5em;
@@ -531,7 +535,6 @@
     }
     .tramites-container{
         margin-bottom: 100%;
-        margin: 80px auto;
     } 
 }
 
