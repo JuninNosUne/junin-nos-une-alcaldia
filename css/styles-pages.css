@@ -539,12 +539,12 @@
 
     .nota-prensa img {
         width: 100%;
-        max-height:400px; 
+        max-height:500px; 
     }
     
     .nota-prensa video {
         width: 100%;
-        max-height:400px; 
+        max-height:500px; 
     }
 
 }

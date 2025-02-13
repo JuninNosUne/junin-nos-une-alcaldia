@@ -811,14 +811,14 @@ button.next-news {
 
   .news-item img { 
     width: 100%;
-    height: 400px;
+    height: 500px;
     object-fit: cover;
     margin: 0;
   }
 
   .news-item video{
     width: 100%;
-    height: 400px;
+    height: 500px;
   }
 
   button.prev-news, button.next-news {
