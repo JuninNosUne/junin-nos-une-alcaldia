@@ -126,8 +126,8 @@
 }
 /* Contenedor de imagen de la noticia */
 .nota-prensa img {
-    max-width: 400px;
-    max-height: 300px; /* Ajusta el tamaño de la imagen */
+    max-width: 500px;
+    max-height:500px; /* Ajusta el tamaño de la imagen */
     border-radius: 8px; 
     margin-right: 20px; 
     margin-bottom: 10px;
@@ -136,8 +136,8 @@
 }
 
 .nota-prensa video {
-    max-width: 400px;
-    max-height: 300px; /* Ajusta el tamaño de la imagen */
+    max-width: 500px;
+    max-height: 500px; /* Ajusta el tamaño de la imagen */
     border-radius: 8px; 
     margin-right: 20px; 
     margin-bottom: 10px;
@@ -479,7 +479,7 @@
     }
     .nota-prensa img {
         max-width: 300;
-        max-height: 200;
+        max-height: 300;
         width: 100%;
     }
     .nota-contenido .meta {
