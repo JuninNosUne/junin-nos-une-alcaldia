@@ -536,6 +536,17 @@
     .tramites-container{
         margin-bottom: 100%;
     } 
+
+    .nota-prensa img {
+        max-width: 300px;
+        max-height:300px; /* Ajusta el tamaño de la imagen */
+    }
+    
+    .nota-prensa video {
+        max-width: 300px;
+        max-height: 300px; /* Ajusta el tamaño de la imagen */
+    }
+
 }
 
 
