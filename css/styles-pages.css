@@ -538,13 +538,13 @@
     } 
 
     .nota-prensa img {
-        max-width: 300px;
-        max-height:300px; /* Ajusta el tamaño de la imagen */
+        width: 100%;
+        max-height:400px; 
     }
     
     .nota-prensa video {
-        max-width: 300px;
-        max-height: 300px; /* Ajusta el tamaño de la imagen */
+        width: 100%;
+        max-height:400px; 
     }
 
 }
