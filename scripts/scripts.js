@@ -45,6 +45,8 @@ function scrollContent(wrapperSelector, gallerySelector, itemSelector, nextBtnSe
     const items = gallery.querySelectorAll(itemSelector);
     let currentIndex = 0;
     let autoScroll;
+    let startX = 0;
+    let endX = 0;
 
     function getItemsPerPage() {
         return window.innerWidth <= 991 ? itemsPerPageMobile : itemsPerPageDesktop;
@@ -102,6 +104,28 @@ function scrollContent(wrapperSelector, gallerySelector, itemSelector, nextBtnSe
             updateGallery();
             resetAutoScroll();
         });
+    });
+
+    // Añade eventos de deslizamiento con el dedo
+    wrapper.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+    });
+
+    wrapper.addEventListener('touchmove', (e) => {
+        endX = e.touches[0].clientX;
+    });
+
+    wrapper.addEventListener('touchend', () => {
+        const itemsPerPage = getItemsPerPage();
+        if (startX > endX + 50) {
+            // Deslizar hacia la izquierda
+            currentIndex = (currentIndex + 1) % (items.length - itemsPerPage + 1);
+        } else if (startX < endX - 50) {
+            // Deslizar hacia la derecha
+            currentIndex = (currentIndex - 1 + items.length - itemsPerPage + 1) % (items.length - itemsPerPage + 1);
+        }
+        updateGallery();
+        resetAutoScroll();
     });
 }
 
