@@ -127,6 +127,16 @@ function scrollContent(wrapperSelector, gallerySelector, itemSelector, nextBtnSe
         updateGallery();
         resetAutoScroll();
     });
+
+    const videos = gallery.querySelectorAll('video');
+    videos.forEach(video => {
+        video.addEventListener('play', () => {
+            clearInterval(autoScroll);
+        });
+        video.addEventListener('pause', () => {
+            resetAutoScroll();
+        });
+    });
 }
 
 // Invoca la función para la galería de imágenes con flechas
