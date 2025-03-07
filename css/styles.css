@@ -158,9 +158,10 @@ a {
 }
 
 .nav__logo img {
-  height: 5rem; /* Asegura que la imagen ocupe toda la altura disponible del contenedor */
-  width: auto; /* Mantiene la proporción de la imagen */
-  display: block; /* Quita los espacios en blanco alrededor de la imagen */
+  height: 5rem; 
+  width: auto; 
+  display: block;
+  margin-right: 25px;
 }
 
 .nav__list, 
@@ -305,6 +306,41 @@ a {
 }
 }
 
+.nav__item--submenu {
+  position: relative;
+}
+
+.nav__submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 10px;
+}
+
+.nav__submenu-item {
+  padding: 10px 20px;
+}
+
+.nav__submenu-link {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.nav__item--submenu.open .nav__submenu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
 /*=============== CARRUSEL DE IMAGENES ===============*/
 .gallery-wrapper, .gallery, .gallery img {
   width: 100%;
@@ -443,7 +479,7 @@ main h3 {
 
 .news-gallery {
   display: flex;
-  transition: transform 2.5s ease;
+  transition: transform 1.5s ease;
   will-change: transform;
   width: 100%;
 }
@@ -824,5 +860,10 @@ button.next-news {
   button.prev-news, button.next-news {
     font-size: 16px;
     top: 90%;
+  }
+
+  .nav__submenu {
+    position: static;
+    box-shadow: none;
   }
 }

@@ -1,7 +1,7 @@
 /*=============== MENU COMPONENT ===============*/
 class MenuComponent extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
+  connectedCallback() {
+    this.innerHTML = `
         <header class="header" id="header">
             <nav class="nav container">
                 <a href="../index.html" class="nav__logo">
@@ -27,11 +27,18 @@ class MenuComponent extends HTMLElement {
                                 <span>Trámites</span>
                             </a>
                         </li>
-                        <li class="nav__item">
-                            <a href="./municipio.html" class="nav__link">
-                                <i class="ri-arrow-right-up-line"></i>
+                        <li class="nav__item nav__item--submenu" id="municipio-item">
+                            <a class="nav__link">
+                                <i class="ri-arrow-down-s-line"></i>
                                 <span>Municipio</span>
                             </a>
+                             <ul class="nav__submenu">
+                                <li class="nav__submenu-item">
+                                    <a href="./municipio.html" class="nav__submenu-link">
+                                        <span><i class="ri-arrow-right-up-line"></i>Municipio</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="nav__item">
                             <a href="./eventos.html" class="nav__link">
@@ -75,6 +82,12 @@ class MenuComponent extends HTMLElement {
             </nav>
         </header>
         `;
-    }
+        
+        // JavaScript para manejar el evento de clic
+        const municipioItem = this.querySelector('#municipio-item');
+        municipioItem.addEventListener('click', function() {
+            this.classList.toggle('open');
+        });
+  }
 }
-customElements.define('menu-component', MenuComponent);
+customElements.define("menu-component", MenuComponent);
