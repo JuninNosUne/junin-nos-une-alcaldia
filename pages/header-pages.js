@@ -28,14 +28,19 @@ class MenuComponent extends HTMLElement {
                             </a>
                         </li>
                         <li class="nav__item nav__item--submenu" id="municipio-item">
-                            <a class="nav__link">
+                            <p class="nav__link">
                                 <i class="ri-arrow-down-s-line"></i>
                                 <span>Municipio</span>
-                            </a>
+                            </p>
                              <ul class="nav__submenu">
                                 <li class="nav__submenu-item">
                                     <a href="./municipio.html" class="nav__submenu-link">
                                         <span><i class="ri-arrow-right-up-line"></i>Municipio</span>
+                                    </a>
+                                </li>
+                                <li class="nav__submenu-item">
+                                    <a href="./campains.html" class="nav__submenu-link">
+                                        <span><i class="ri-arrow-right-up-line"></i>Campañas</span>
                                     </a>
                                 </li>
                             </ul>
@@ -87,6 +92,7 @@ class MenuComponent extends HTMLElement {
         const municipioItem = this.querySelector('#municipio-item');
         municipioItem.addEventListener('click', function() {
             this.classList.toggle('open');
+            this.classList.toggle('active');
         });
   }
 }

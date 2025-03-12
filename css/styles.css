@@ -10,7 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    overflow-y: scroll; /* Habilita la barra de desplazamiento vertical */
+    overflow-y: scroll;
     font-family: "Poppins", sans-serif;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
@@ -247,28 +247,26 @@ a {
   transform: translateY(-.25rem);
 }
 
-/* Show menu */
 .show-menu {
   left: 0;
 }
 
-/* Animation link when displaying menu */
 .show-menu .nav__item {
   visibility: visible;
   transform: translateX(0);
 }
 
 /*=============== BREAKPOINTS ===============*/
-/* For large devices */
+
 @media screen and (min-width: 1150px) {
   .container {
     margin-inline: auto;
   }
   
   .nav__logo img {
-      height: 7rem; /* Asegura que la imagen ocupe toda la altura disponible del contenedor */
-      width: auto; /* Mantiene la proporción de la imagen */
-      display: block; /* Quita los espacios en blanco alrededor de la imagen */
+      height: 7rem; 
+      width: auto; 
+      display: block; 
       transition: height 0.3s ease;
   }
 
@@ -341,6 +339,20 @@ a {
   transform: translateY(0);
 }
 
+.nav__item--submenu.active .nav__link span {
+  margin-left: 2.5rem;
+}
+
+.nav__item--submenu.active .nav__link i {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav__item--submenu.active .nav__link span::after {
+  width: 100%;
+}
+
+
 /*=============== CARRUSEL DE IMAGENES ===============*/
 .gallery-wrapper, .gallery, .gallery img {
   width: 100%;
@@ -383,39 +395,39 @@ button.prev, button.next {
   transform: translateY(-50%);
   color: rgb(255, 255, 255);
   border: none;
-  background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para visibilidad */
+  background: rgba(0, 0, 0, 0.7); 
   padding: 10px;
   cursor: pointer;
-  font-size: 24px; /* Tamaño del icono */
-  z-index: 10; /* Asegura que los botones estén por encima de las imágenes */
+  font-size: 24px; 
+  z-index: 10; 
   box-sizing: border-box;
-  border-radius: 5px; /* Añadido borde redondeado */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para efecto de elevación */
-  transition: background 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+  border-radius: 5px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+  transition: background 0.3s ease, transform 0.3s ease; 
 }
 
 button.prev:hover, button.next:hover {
-  background: rgba(0, 0, 0, 0.9); /* Fondo más oscuro al pasar el ratón */
-  transform: translateY(-50%) scale(1.1); /* Aumenta el tamaño al pasar el ratón */
+  background: rgba(0, 0, 0, 0.9); 
+  transform: translateY(-50%) scale(1.1); 
 }
 
 button.prev:active, button.next:active {
-  transform: translateY(-50%) scale(0.95); /* Reduce el tamaño al hacer clic */
+  transform: translateY(-50%) scale(0.95); 
 }
 
 button.prev {
-  left: 0; /* Ajusta para estar al borde izquierdo */
+  left: 0; 
 }
 
 button.next {
-  right: 0; /* Ajusta para estar al borde derecho */
+  right: 0; 
 }
 
 
 /*=============== EVITAR SUPERPOSICION DE MAPA ===============*/
 #map {
-  position: relative; /* Asegura que se posicione correctamente */
-  z-index: 1; /* Valor menor que el del menú */
+  position: relative; 
+  z-index: 1; 
 }
 
 /*=============== SECCION INFORMACION ===============*/
@@ -462,7 +474,6 @@ main h3 {
 }
 
 /*=============== SECCION ACTUALIDAD ===============*/
-/* Estilo general del contenedor */
 
 .news-container {
   width: 1200px;
@@ -489,7 +500,7 @@ main h3 {
   border-radius: 6px;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
   margin: 0 10px;
-  flex: 0 0 calc(33.33% - 20px); /* Muestra 3 noticias a la vez con espacio entre ellas */
+  flex: 0 0 calc(33.33% - 20px); 
   box-sizing: border-box;
 }
 
@@ -620,7 +631,7 @@ button.next-news {
 
 .nav__social {
   display: flex;
-  gap: 10px; /* Añade espacio entre los enlaces */
+  gap: 10px; 
 }
 
 .suggestions-form {

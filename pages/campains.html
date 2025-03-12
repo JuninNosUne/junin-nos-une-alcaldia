@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"/>
@@ -12,11 +12,72 @@
     <title>Campañas</title>
 </head>
 <body>
+  <div class="main-content">
     <menu-component></menu-component>
-    <script>
-      logoMovement();
-    </script>
+  <script>
+    logoMovement();
+  </script>
+  
+  <h2>Campañas</h2>
 
-    <h2>Próximamente...</h2>
+  <a href=""></a>
+  
+  <div class="campains container">
+      <div class="campain-item">
+          <a href="javascript:void(0)" onclick="showGif('BrujulaRubiense.html', '../img/BrujulaRubiense.gif')">
+              <img src="../img/BrujulaRubiense.png" alt="">
+          </a>
+          <div class="campain-content">
+            <h3>Brújula Rubiense</h3>
+          </div>
+      </div>
+      <div class="campain-item">
+          <a href="javascript:void(0)" onclick="showGif('kmDeConciencia.html', '../img/kmDeConciencia.gif')">
+              <img src="../img/kmDeConciencia.png" alt="">
+          </a>
+          <div class="campain-content">
+            <h3>Kilómetros de Conciencia</h3>
+          </div>
+      </div>
+      <div class="campain-item">
+          <a href="javascript:void(0)" onclick="showGif('RaicesDelCambio.html', '../img/RaicesDelCambio.gif')">
+              <img src="../img/RaicesDelCambio.png" alt="">
+          </a>
+          <div class="campain-content">
+            <h3>Raíces del Cambio</h3>
+          </div>
+      </div>
+      <div class="campain-item">
+          <a href="javascript:void(0)" onclick="showGif('ImpuestosQueTransforman.html', '../img/ImpuestosQueTransforman.gif')">
+              <img src="../img/ImpuestosQueTransforman.png" alt="">
+          </a>
+          <div class="campain-content">
+            <h3>Impuestos que Transforman</h3>
+          </div>
+      </div>
+  </div>
+  
+  <div id="gifOverlay" class="gif-overlay">
+      <img id="gifImage" src="" alt="Animation">
+  </div>
+  
+  <script src="./header-pages.js"></script>
+  <script src="../scripts/scripts.js"></script>
+  <script>
+      function showGif(targetUrl, gifUrl) {
+          const overlay = document.getElementById('gifOverlay');
+          const gifImage = document.getElementById('gifImage');
+          gifImage.src = gifUrl;
+          overlay.style.display = 'flex';
+          setTimeout(() => {
+              window.location.href = targetUrl;
+          }, 4000);
+      }
+  </script>
+  </div>
 </body>
+  <div class="copyright">
+    Alcaldía del Municipio Junín. © 2024. Todos los derechos reservados.
+  </div>
 </html>
+  
