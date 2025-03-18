@@ -459,7 +459,7 @@
 
 .campain-item {
     flex: 1;
-    height: 400px;
+    height: auto;
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 8px;
