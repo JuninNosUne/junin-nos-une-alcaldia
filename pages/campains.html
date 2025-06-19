@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
+    />
+    <link rel="stylesheet" href="../css/styles-pages.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>Campañas</title>
+  </head>
+  <body>
+    <div class="main-content">
+      <menu-component></menu-component>
+      <script>
+        logoMovement();
+      </script>
+
+      <h2>Campañas</h2>
+
+      <div class="campains container">
+        <div class="campain-item">
+          <a
+            href="javascript:void(0)"
+            onclick="showGif('BrujulaRubiense.html', '../img/BrujulaRubiense.gif')"
+          >
+            <img src="../img/BrujulaRubiense.png" alt="" />
+          </a>
+          <div class="campain-content">
+            <h3>Brújula Rubiense</h3>
+            <p>
+              Una campaña diseñada para resaltar los lugares más emblemáticos de
+              Junín, compartiendo su historia y atractivo turístico. Además,
+              busca promover la gastronomía local, dando a conocer los platos y
+              comidas típicas que forman parte de la identidad del municipio.
+            </p>
+          </div>
+        </div>
+        <div class="campain-item">
+          <a
+            href="javascript:void(0)"
+            onclick="showGif('kmDeConciencia.html', '../img/kmDeConciencia.gif')"
+          >
+            <img src="../img/kmDeConciencia.png" alt="" />
+          </a>
+          <div class="campain-content">
+            <h3>Kilómetros de Conciencia</h3>
+            <p>
+              Iniciativa enfocada en educar a la población sobre la importancia
+              de la seguridad vial. A través de contenido informativo y
+              reflexivo, busca fomentar el respeto por las normas de tránsito y
+              promover una movilidad segura y responsable.
+            </p>
+          </div>
+        </div>
+        <div class="campain-item">
+          <a
+            href="javascript:void(0)"
+            onclick="showGif('RaicesDelCambio.html', '../img/RaicesDelCambio.gif')"
+          >
+            <img src="../img/RaicesDelCambio.png" alt="" />
+          </a>
+          <div class="campain-content">
+            <h3>Raíces del Cambio</h3>
+            <p>
+              Campaña ambiental que sensibiliza sobre los efectos de la
+              contaminación y fomenta hábitos sostenibles. Su objetivo es crear
+              conciencia sobre la importancia de cuidar el medio ambiente y
+              adoptar prácticas responsables para su preservación.
+            </p>
+          </div>
+        </div>
+        <div class="campain-item">
+          <a
+            href="javascript:void(0)"
+            onclick="showGif('ImpuestosQueTransforman.html', '../img/ImpuestosQueTransforman.gif')"
+          >
+            <img src="../img/ImpuestosQueTransforman.png" alt="" />
+          </a>
+          <div class="campain-content">
+            <h3>Impuestos que Transforman</h3>
+            <p>
+              Una campaña que refuerza la cultura tributaria y muestra, de
+              manera transparente, cómo los impuestos se traducen en obras y
+              mejoras que benefician el desarrollo del municipio y la calidad de
+              vida de sus habitantes.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="gifOverlay" class="gif-overlay">
+        <img id="gifImage" src="" alt="Animation" />
+      </div>
+
+      <script src="./header-pages.js"></script>
+      <script src="../scripts/scripts.js"></script>
+      <script>
+        function showGif(targetUrl, gifUrl) {
+          localStorage.setItem("gifShown", "true"); 
+          const overlay = document.getElementById("gifOverlay");
+          const gifImage = document.getElementById("gifImage");
+          gifImage.src = gifUrl;
+          overlay.style.display = "flex";
+          setTimeout(() => {
+            window.location.href = targetUrl;
+          }, 4000);
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+          const overlay = document.getElementById("gifOverlay");
+          const gifImage = document.getElementById("gifImage");
+          const gifShown = localStorage.getItem("gifShown");
+
+          if (gifShown === "true") {
+            overlay.style.display = "none";
+            gifImage.src = "";
+          } else {
+            overlay.style.display = "none";
+            gifImage.src = "";
+          }
+        });
+      </script>
+    </div>
+    <div class="copyright">
+      Alcaldía del Municipio Junín. © 2024. Todos los derechos reservados.
+    </div>
+  </body>
+</html>

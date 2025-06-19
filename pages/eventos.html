@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/styles-pages.css" />
+    <title>Eventos</title>
+    <script src="./header-pages.js"></script>
+    <script src="../scripts/scripts.js"></script>
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-3S6ESNYG0C"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-3S6ESNYG0C");
+  </script>
+  <menu-component></menu-component>
+  <script>
+    logoMovement();
+  </script>
+
+  <body class="eventos-body">
+    <main class="eventos-main">
+      <h2 class="eventos-h2">Calendario de Eventos</h2>
+      <div class="calendar-container" style="max-width: 1200px; margin: 0 auto">
+        <iframe
+          src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=America%2FCaracas&src=NTQyNjk5MWI1YzIzNjFhYjIzYTMyOWJlNTRjY2E2NDJiNmY5NDcyYWIyZTg3MmIxZTIyNzkyYTUyZmNjN2MzMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23F4511E"
+          style="border-width: 0"
+          width="100%"
+          height="600"
+          id="calendar-iframe"
+          frameborder="0"
+          scrolling="no"
+        ></iframe>
+      </div>
+    </main>
+
+    <div class="copyright">
+      Alcaldía del Municipio Junín. © 2024. Todos los derechos reservados.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sitio web oficial de la Alcaldía del Municipio Junín. Información sobre la gestión municipal, noticias, eventos y más."
+    />
+    <meta
+      name="keywords"
+      content="Alcaldía, Municipio Junín, gestión municipal, noticias, eventos, Junín, Rubio, Táchira, Junín nos une, Alcaldía del Municipio Junín"
+    />
+    <meta name="author" content="Alcaldía del Municipio Junín" />
+    <meta property="og:title" content="Alcaldía del Municipio Junín" />
+    <meta
+      property="og:description"
+      content="Sitio web oficial de la Alcaldía del Municipio Junín. Información sobre la gestión municipal, noticias, eventos y más."
+    />
+    <meta
+      property="og:url"
+      content="https://juninnosune.github.io/junin-nos-une-alcaldia/"
+    />
+    <meta property="og:type" content="website" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
+    />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    /></noscript>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Alcaldía del Municipio Junín</title>
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-3S6ESNYG0C"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-3S6ESNYG0C");
+  </script>
+  <body>
+    <script defer src="./header.js"></script>
+    <script src="./scripts/scripts.js"></script>
+    <menu-component></menu-component>
+
+    <script>
+      logoMovement();
+    </script>
+
+    <div class="image-gallery container">
+      <div class="gallery-wrapper">
+        <div class="gallery">
+          <img src="./img/alcaldia1.jpg" alt="Imagen 1" />
+          <img src="./img/alcaldia2.jpg" alt="Imagen 2" />
+          <img src="./img/alcaldia3.jpg" alt="Imagen 3" />
+          <img src="./img/alcaldia4.jpg" alt="Imagen 4" />
+          <img src="./img/alcaldia5.jpg" alt="Imagen 5" />
+        </div>
+        <button class="prev"><i class="ri-arrow-left-s-line"></i></button>
+        <button class="next"><i class="ri-arrow-right-s-line"></i></button>
+      </div>
+
+      <script>
+        scrollContent();
+      </script>
+    </div>
+
+    <main class="home-content container">
+      <h2>¿Quiénes somos?</h2>
+      <div class="home-txt container">
+        <div class="mision-txt">
+          <h3>Misión</h3>
+          <p>
+            Desarrollar una gestión municipal inteligente e innovadora, al
+            servicio de los habitantes del municipio Junín con eficacia y
+            eficiencia, con un alto sentido de compromiso y el óptimo manejo de
+            los recursos de conformidad con las competencias constitucionales
+            legales.
+          </p>
+        </div>
+
+        <div section="vision-txt">
+          <h3>Visión</h3>
+          <p>
+            Ser, desde el 2022 al 2025, el municipio que responde a los
+            intereses de los habitantes y en consonancia con las potencialidades
+            políticas, sociales, ecológicas, culturales y tecnológicas de las
+            comunidades; bajo el compromiso de contribuir con la calidad de
+            vida, mediante programas y proyectos que enaltezcan los valores y el
+            orgullo de pertenecer a este espacio; con el reto de lograr un
+            modelo municipal y hacia la consolidación de una gestión sostenible.
+          </p>
+        </div>
+
+        <div section="objetivos-txt">
+          <h3>Objetivos</h3>
+          <p>
+            Ejercer sus competencias constitucionales y legales de forma
+            autónoma como la unidad política primaria de la Organización
+            Nacional de la República, gozando de personalidad jurídica,
+            incorporando la participación protagónica de los habitantes del
+            Municipio Junín, a través de las comunidades organizadas, de manera
+            efectiva, suficiente y oportuna, en la definición y ejecución de la
+            gestión pública, en el control y evaluación de resultados.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <!--
+      <div class="flayers container">
+      <img src="./img/flayer.jpg" alt="flayer" />
+    </div> 
+    -->
+
+    <div class="interactive-map container">
+      <h2>Ubicación Geográfica</h2>
+      <div>
+        <title>Mapa Interactivo</title>
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        />
+        <style>
+          #map {
+            height: 400px;
+          }
+        </style>
+      </div>
+      <div section="map">
+        <div id="map"></div>
+
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+        <script>
+          inicializarMapa();
+        </script>
+      </div>
+    </div>
+
+    <div class="news-container">
+      <div class="news-wrapper">
+        <h2>Actualidad</h2>
+        <div class="news-gallery">
+          <div class="news-item">
+            <a href="./pages/actualidad.html#nota-1">
+              <img src="./img/noticia1.jpeg" alt="Imagen 1" />
+            </a>
+
+            <div class="news-content">
+              <!-- !  Noticia 1 -->
+              <h3>
+                Alcaldía de Junín inaugura primer consultorio odontológico
+                pediátrico
+              </h3>
+              <p>
+                Con el objetivo de brindar atención médica especializada a la
+                población infantil del municipio Junín, el pasado 19 de mayo fue
+                inaugurado el primer consultorio odontológico pediátrico en la
+                sede de la Alcaldía. Este nuevo espacio ofrecerá consultas y
+                valoraciones gratuitas, y otros servicios a precios
+                accesibles.<br /><br />
+              </p>
+            </div>
+          </div>
+          <div class="news-item">
+            <a href="./pages/actualidad.html#nota-2">
+              <img src="./img/noticia2.jpeg" alt="Imagen 2" />
+            </a>
+
+            <div class="news-content">
+              <!-- !  Noticia 2 -->
+              <h3>
+                Alcaldía de Junín activa su primer consultorio odontológico
+                pediátrico
+              </h3>
+              <p>
+                El primer consultorio odontológico pediátrico instalado en la
+                sede de la Alcaldía del municipio Junín comenzó a funcionar
+                oficialmente el pasado 2 de junio, con la atención a seis niños
+                de la Escuela Municipal de Escaleras.
+              </p>
+            </div>
+          </div>
+          <div class="news-item">
+            <a href="./pages/actualidad.html#nota-3">
+              <img src="./img/noticia3.jpeg" alt="Imagen 3" />
+            </a>
+
+            <div class="news-content">
+              <!-- !  Noticia 3 -->
+              <h3>
+                Instalan tuberías de cloacas en Fiqueros tras años de abandono,
+                según líderes comunitarios
+              </h3>
+              <p>
+                La Alcaldía del municipio Junín inició la instalación de
+                tuberías de cloacas en la comunidad de Fiqueros, como parte de
+                los trabajos de mejora en los servicios públicos que ejecuta en
+                sectores vulnerables del municipio.
+              </p>
+            </div>
+          </div>
+          <div class="news-item">
+            <a href="./pages/actualidad.html#nota-4">
+              <iframe
+                class="news-video"
+                src="https://drive.google.com/file/d/1p3itREKFqAVYUIAx0RDsOmIhGLPqpkhJ/preview"
+                width="640"
+                height="480"
+                allow="autoplay"
+              ></iframe>
+            </a>
+
+            <div class="news-content">
+              <!-- ?  Noticia 4 -->
+              <h3>Impuestos: 20% de descuento</h3>
+              <p>
+                La recaudación de impuestos, un pilar fundamental para el
+                desarrollo económico y social.
+              </p>
+            </div>
+          </div>
+          <div class="news-item">
+            <a href="./pages/actualidad.html#nota-5">
+              <img src="./img/noticia5.jpg" alt="Imagen 5" />
+            </a>
+            <div class="news-content">
+              <!-- !  Noticia 5 -->
+              <h3>Entre música y color Rubio celebra los carnavales 2025</h3>
+              <p>
+                La ciudad de Rubio se llenó de color y alegría el pasado lunes 3
+                de marzo con el desfile de carnavales, un evento que reunió a
+                alrededor de 27 comparsas y diversas agrupaciones artísticas
+                para celebrar esta tradicional festividad.
+              </p>
+            </div>
+          </div>
+        </div>
+        <button class="prev-news"><i class="ri-arrow-left-s-line"></i></button>
+        <div class="news-buttons">
+          <button class="news-button" data-index="0">1</button>
+          <button class="news-button" data-index="1">2</button>
+          <button class="news-button" data-index="2">3</button>
+          <button class="news-button" data-index="3">4</button>
+          <button class="news-button" data-index="5">5</button>
+        </div>
+        <button class="next-news"><i class="ri-arrow-right-s-line"></i></button>
+        <div class="news-space"></div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer_content container">
+        <div section="suggestions" class="suggestions-form">
+          <h3>Envíenos sus sugerencias</h3>
+          <form action="https://formspree.io/f/mldedkar" method="POST">
+            <label for="nombre">Nombre</label>
+            <input
+              type="text"
+              name="name"
+              id="nombre"
+              placeholder="Escriba su nombre"
+            />
+
+            <label for="email">Correo Electrónico</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Escriba su correo electrónico"
+            />
+
+            <label for="subject">Asunto</label>
+            <input
+              type="text"
+              name="subject"
+              id="subject"
+              placeholder="Escriba el asunto"
+            />
+
+            <label for="comments">Comentarios</label>
+            <textarea
+              name="comments"
+              id="comments"
+              cols="30"
+              rows="5"
+              placeholder="Escriba sus comentarios"
+            ></textarea>
+
+            <input type="submit" value="Enviar" />
+          </form>
+        </div>
+
+        <div section="footer_info">
+          <div class="direction">
+            <h3>Dirección</h3>
+            <p>
+              Calle 1 entre avenidas 9 y 10 las Flores, Rubio Estado Táchira.
+            </p>
+          </div>
+          <div class="contact">
+            <h3>Horarios de Atención</h3>
+            <p>Lunes a viernes. 8:00 am - 1:00 pm.</p>
+          </div>
+
+          <div class="nav__social">
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              class="nav__social-link"
+            >
+              <i class="ri-instagram-line"></i>
+            </a>
+            <a href="" target="_blank" class="nav__social-link">
+              <i class="ri-facebook-circle-line"></i>
+            </a>
+            <a href="" target="_blank" class="nav__social-link">
+              <i class="ri-twitter-x-line"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="copyright">
+      Alcaldía del Municipio Junín. © 2024. Todos los derechos reservados.
+    </div>
+  </body>
+</html>
